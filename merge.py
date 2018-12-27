@@ -16,7 +16,9 @@ from pykeepass import PyKeePass
     'You will be prompted if not provided. '
     'Environment variable KEEPASS_PASSWORD can be set as well'))
 def main(srcfiles, resultfile, password):
-    """Main entry point"""
+    """Merge all keepass SRCFILES into a new file named RESULTFILE.
+    Password for all files must be the same.
+    """
     sources = [PyKeePass(p, password) for p in srcfiles]
     uuids = set()
     dest = None
