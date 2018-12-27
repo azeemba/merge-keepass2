@@ -1,0 +1,9 @@
+argon2-cffi==18.3.0
+cffi==1.11.5
+construct==2.9.45
+lxml==4.2.5
+pycparser==2.19
+pycryptodome==3.7.2
+pykeepass==3.0.2
+python-dateutil==2.7.5
+six==1.12.0
