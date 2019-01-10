@@ -1,5 +1,6 @@
 argon2-cffi==18.3.0
 cffi==1.11.5
+click==7.0
 construct==2.9.45
 lxml==4.2.5
 pycparser==2.19
