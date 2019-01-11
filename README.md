@@ -15,8 +15,11 @@ Usage: merge.py [OPTIONS] [SRCFILES]... RESULTFILE
 
 Options:
   --password TEXT  The password for keepass. You will be prompted if not
-                   provided. Environment variable KEEPASS_PASSWORD can be set
-                   as well
+                   provided. Use `--password ""` if your database is only
+                   protected by a keyfile. Environment variable
+                   KEEPASS_PASSWORD can be set as well
+  --keyfile TEXT   The path of a keyfile for keepass (optional). Environment
+                   variable KEEPASS_KEYFILE can be set as well
   --help           Show this message and exit.
 ```
 

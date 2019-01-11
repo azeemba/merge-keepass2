@@ -14,11 +14,13 @@ from pykeepass import PyKeePass
     envvar='KEEPASS_PASSWORD',
     help=('The password for keepass. '
     'You will be prompted if not provided. '
+    'Use `--password ""` if your database is only protected by '
+    'a keyfile. '
     'Environment variable KEEPASS_PASSWORD can be set as well'))
 @click.option(
     '--keyfile', prompt=False,
     envvar='KEEPASS_KEYFILE',
-    help=('The path of a keyfile for keepass. '
+    help=('The path of a keyfile for keepass (optional). '
     'Environment variable KEEPASS_KEYFILE can be set as well'))
 def main(srcfiles, resultfile, password, keyfile):
     """Merge all keepass SRCFILES into a new file named RESULTFILE.
