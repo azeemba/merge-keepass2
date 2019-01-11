@@ -15,11 +15,16 @@ from pykeepass import PyKeePass
     help=('The password for keepass. '
     'You will be prompted if not provided. '
     'Environment variable KEEPASS_PASSWORD can be set as well'))
-def main(srcfiles, resultfile, password):
+@click.option(
+    '--keyfile', prompt=False,
+    envvar='KEEPASS_KEYFILE',
+    help=('The path of a keyfile for keepass. '
+    'Environment variable KEEPASS_KEYFILE can be set as well'))
+def main(srcfiles, resultfile, password, keyfile):
     """Merge all keepass SRCFILES into a new file named RESULTFILE.
     Password for all files must be the same.
     """
-    sources = [PyKeePass(p, password) for p in srcfiles]
+    sources = [PyKeePass(p, password, keyfile) for p in srcfiles]
     uuids = set()
     dest = None
     for source in sources:
