@@ -1,6 +1,8 @@
 merge-keepass2
 ==============
 
+[![Build Status](https://travis-ci.org/azeemba/merge-keepass2.svg?branch=master)](https://travis-ci.org/azeemba/merge-keepass2)
+
 Command line application to merge KeePass2 files into a new file.
 
 ## Usage
